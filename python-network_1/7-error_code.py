@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """send a get request to a url provided and handle error"""
 import requests
 import requests.exceptions
