@@ -1,7 +1,14 @@
 #!/usr/bin/node
-const args = process.argv.slice(2);
-if (args.length <= 1) {
-  console.log(0);
+const arg = Number(process.argv[2]);
+if (isNaN(arg)) {
+  console.log(1);
 } else {
-  console.log(args.sort((a, b) => b - a)[1]);
+  console.log(factorial(arg));
+}
+
+function factorial (num) {
+  if (num === 0) {
+    return 1;
+  }
+  return num * factorial(num - 1);
 }
